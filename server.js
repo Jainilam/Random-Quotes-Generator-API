@@ -418,7 +418,7 @@ function getRandomItem(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-app.get("/api/randomquotes", (req, res) => {
+app.get("/", (req, res) => {
   const singleQuotes = {};
 
   for (const category in quoteCategories) {
@@ -434,5 +434,5 @@ app.get("/api/randomquotes", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}/api/randomquotes`);
+  console.log(`Server is running at http://localhost:${port}/`);
 });
