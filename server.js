@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 2005;
+const port = 3000;
 
 // Define different categories of quotes
 const quoteCategories = {
@@ -412,115 +412,13 @@ const quoteCategories = {
     "I'm not fat; I'm just easier to see.",
     "I don't always lose my phone, but when I do, it's always on silent.",
   ],
-  family: [
-    "Family: where life begins and love never ends.",
-    "The love of a family is life's greatest blessing.",
-    "Family is not an important thing. It's everything.",
-    "In family life, love is the oil that eases friction, the cement that binds closer together, and the music that brings harmony.",
-    "Family means nobody gets left behind or forgotten.",
-    "Family is like branches on a tree; we all grow in different directions, yet our roots remain as one.",
-    "Family: a little bit of crazy, a little bit of loud, and a whole lot of love.",
-    "Family is where your story begins.",
-    "The most important thing in the world is family and love.",
-    "Family is the heart of a home.",
-    "Together is our favorite place to be.",
-    "Family: where you are loved no matter what.",
-    "A happy family is but an earlier heaven.",
-    "Family: where life begins and love never ends.",
-    "Family is not defined by our genes, it is built and maintained through love.",
-    "Family is the anchor that holds us through life's storms.",
-    "The family is one of nature's masterpieces.",
-    "Family: a link to the past and a bridge to the future.",
-    "Family is where love is endless and memories are forever.",
-    "Family: where every moment is precious.",
-    "In family life, it's not about perfection, it's about connection.",
-    "Family is the key to happiness.",
-    "Home is wherever my bunch of crazies are.",
-    "Family: a circle of strength, founded on faith, joined in love, kept by God.",
-    "Family is the compass that guides us.",
-    "No family is perfect, but every moment together is a blessing.",
-    "Family is like fudge; mostly sweet with a few nuts.",
-    "Family: a little bit of crazy, a little bit of loud, and a whole lot of love.",
-    "Family is the best team you could ever have.",
-    "Family: the ones who make your heart smile.",
-    "A family's love is forever.",
-    "Family: like branches on a tree, we all grow in different directions yet our roots remain as one.",
-    "Family is the greatest gift.",
-    "Family: where life begins and love never ends.",
-    "Family is where the heart is.",
-    "Family is the greatest treasure.",
-    "Family: the people who know you best and love you the most.",
-    "Family is the source of all happiness.",
-    "A family's love is the best medicine.",
-    "Family: where you are always welcome, always loved.",
-    "Family is the masterpiece of nature.",
-    "Family: where love knows no bounds.",
-    "Family is the heart of everything.",
-    "In family life, love is the fuel that powers everything.",
-    "Family: the ones who make life beautiful.",
-    "Family is the greatest blessing.",
-    "Family: where laughter never ends.",
-    "A family's love is the strongest bond.",
-    "Family is the foundation of life.",
-    "Family: the ones who lift you up when you're down.",
-    "In family life, we may not have it all together, but together we have it all.",
-    "Family is the best support system.",
-    "Family: where you can always be yourself.",
-    "Family is the truest form of love.",
-    "Family: where love is unconditional.",
-    "Family is the heartbeat of the home.",
-    "In family life, it's not about the quantity of time spent together, but the quality of that time.",
-    "Family: where even the smallest moments become cherished memories.",
-    "Family is the foundation upon which we build our lives.",
-    "Family: where love never gives up.",
-    "A family's love is the glue that holds everything together.",
-    "Family is the greatest legacy.",
-    "Family: where you find comfort, support, and love.",
-    "Family is the best team you could ever have.",
-    "Family: where life's journey begins and love never ends.",
-    "Family is the greatest adventure.",
-    "Family: the ones who make every day a little brighter.",
-    "Family is the sweetest gift of all.",
-    "Family: where you are loved simply for being you.",
-    "Family is the heartbeat of happiness.",
-    "Family: where memories are made and love never fades.",
-    "Family is the true meaning of home.",
-    "Family: where every member is a treasure.",
-    "Family is the best kind of love.",
-    "Family: where you find your greatest joy.",
-    "Family is the light that guides us through life's darkest moments.",
-    "Family: where you are always accepted, always supported.",
-    "Family is the sanctuary of love.",
-    "Family: where you are loved beyond measure.",
-    "Family is the heart's true home.",
-    "Family: where every day is an adventure.",
-    "Family is the anchor that keeps us grounded.",
-    "Family: where love grows and memories are shared.",
-    "Family is the greatest comfort.",
-    "Family: where you are cherished, celebrated, and always held dear.",
-    "Family is the truest form of friendship.",
-    "Family: where you find the courage to face anything.",
-    "Family is the greatest joy.",
-    "Family: where you are surrounded by love at every turn.",
-    "Family is the best place to be yourself.",
-    "Family: where you learn to love and be loved.",
-    "Family is the greatest adventure of all.",
-    "Family: where love is the answer to every question.",
-    "Family is the heart's safe harbor.",
-    "Family: where every day is a blessing.",
-    "Family is the greatest teacher of love.",
-    "Family: where you are always supported, always celebrated.",
-    "Family is the foundation of all happiness.",
-    "Family: where you find your greatest strength.",
-    "Family is the greatest treasure of all.",
-  ],
 };
 
 function getRandomItem(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-app.get("/api/quote", (req, res) => {
+app.get("/api/randomquotes", (req, res) => {
   const singleQuotes = {};
 
   for (const category in quoteCategories) {
@@ -536,5 +434,5 @@ app.get("/api/quote", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}/api/quote`);
+  console.log(`Server is running at http://localhost:${port}/api/randomquotes`);
 });
